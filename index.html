@@ -9,8 +9,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  <script type = "text/javascript" src = "test.js"> </script>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <script type = "text/javascript" src = "script.js"> </script>
 </head>
 <body>
 <div class="container-fluid">
@@ -29,21 +29,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-            <td class = "bitcoin">
-                Bitcoin 
-            </td>
-            <td> 
-                <p class = "bitcoin" id = "bitcoinPrice">  </p> 
-            </td>
-            <td class = "bitcoin">         
-                0
-            </td>
-            <td>
-                 <p class = "bitcoin" id = "bitcoinTotalAmount"> </p>
-            </td>
-
-        </tr>
+       
       </tbody>
     </table>
   </div>
@@ -56,12 +42,22 @@
   <div class="card">
     <div class="card-body">
         <img src="https://cdn.iconscout.com/public/images/icon/free/png-512/bitcoin-cryptocurrency-crypto-currency-coin-logo-3a4fff75be1b0f49-512x512.png" alt="Card image" style="width:100px; height: 100px; vertical-align: middle">
-        <center> <span> Bitcoin</span></center>
+        <center> <span class  = "foo" id = "bitcoinPrice"> </span></center>
+       
       <h4 class="card-title">Bitcoin</h4>
       <p class="card-text">Some example text some example text. Jane Doe is an architect and engineer</p>
       <a href="#" class="btn btn-primary">See Profile</a>
     </div>
-    
+  </div>
+        
+        <div class="card">
+    <div class="card-body">
+        <img src="https://neo.org/images/neo-logo/1024.png" alt="Card image" style="width:100px; height: 100px; vertical-align: middle">
+        <center> <span id = "neoPrice"> </span></center>
+      <h4 class="card-title">Neo</h4>
+      <p class="card-text">Some example text some example text. Jane Doe is an architect and engineer</p>
+      <a href="#" class="btn btn-primary">See Profile</a>
+    </div>
   </div>
 </div>
 
