@@ -1,14 +1,20 @@
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() 
+/*eslint-env browser*/
+     
+    var num = 0;
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() 
     {
         if (this.readyState == 4 && this.status == 200) 
         {
         var myArr = JSON.parse(this.responseText);
-        var price = document.getElementById("bitcoinPrice").innerHTML = myArr[0].price_usd;
-        document.getElementById("bitcoinTotalAmount").innerHTML = (price * 0).toFixed(2);   
+        document.getElementById("coinPrice").innerHTML = Number(myArr.data.quotes.USD.price).toFixed(2);
+            
+        document.getElementById("coinName").innerHTML = myArr.data.name;
+        document.getElementById("coinChange").innerHTML = myArr.data.quotes.USD.percent_change_24h;
+          
         }
     };
-        xmlhttp.open("GET", "https://api.coinmarketcap.com/v1/ticker/bitcoin/", true);
+        xmlhttp.open("GET", "https://api.coinmarketcap.com/v2/ticker/1/", true);
         xmlhttp.send();
 
         var xmlhttp2 = new XMLHttpRequest();
@@ -17,11 +23,10 @@
             if (this.readyState == 4 && this.status == 200) 
             {
             var myArr = JSON.parse(this.responseText);
-            var price = document.getElementById("neoPrice").innerHTML = myArr[0].price_usd; 
-            var totalAmount = document.getElementById("neoTotalAmount").innerHTML = (price * 5).toFixed(2);
-            num = parseInt(num) + parseInt(totalAmount);
+            document.getElementById("neoPrice").innerHTML = Number(myArr.data.quotes.USD.price).toFixed(2);
+          
            
             }
         };
-        xmlhttp2.open("GET", "https://api.coinmarketcap.com/v1/ticker/neo/", true);
+        xmlhttp2.open("GET", "https://api.coinmarketcap.com/v2/ticker/1376/", true);
         xmlhttp2.send();
