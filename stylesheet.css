@@ -14,18 +14,27 @@
 
 .box1 {
    float: left;
-  width:33.33333%;
-  text-align:left;
+   width:33.33333%;
+   text-align:left;
 }
 
 .box2 {
       float: left;
-  width:33.33333%;
-  text-align:center
+      width:33.33333%;
+      text-align:center
 }
 
 .box3 {
      float: left;
- width:33.33333%;
- text-align:right;
+     width:33.33333%;
+     text-align:right;
+     color: #009e73;
+}
+
+.bitcoin {
+    color: orange;
+}
+
+.neo {
+    color: greenyellow;
 }
