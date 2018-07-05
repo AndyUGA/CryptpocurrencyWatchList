@@ -7,12 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+    </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <script type = "text/javascript" src = "script.js"> </script>
 </head>
-<body>
+<body ng-app="myApp">
+
 <div class="container-fluid">
  <center><h1>Cryptocurrency Watch List</h1> </center>                                                                                    
   <div class="jumbotron ">
@@ -70,25 +73,12 @@
          <p class="card-text neo" id = "coinMarketCap2"><small class="text-muted"> </small></p>
   </div>
     </div>
-
     
-    <div class="card mb-3">
-  <img class="card-img-top icon" src="https://cdn.iconscout.com/public/images/icon/free/png-512/bitcoin-cryptocurrency-crypto-currency-coin-logo-3a4fff75be1b0f49-512x512.png" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-  </div>
-</div>
-<div class="card">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-  </div>
-  <img class="card-img-bottom" src="..." alt="Card image cap">
-</div>
-        
+    <p id = "coinPrice3"> </p>
+    <div ng-repeat = "item in testArray">
+            {{item}}
+    </div>
+    
         
 </div>
 
