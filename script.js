@@ -1,7 +1,10 @@
 /*eslint-env browser*/
      
-    var num = 0;
-    var testArray = [];
+    //var num = 0;
+    //var testArray = [];
+
+
+
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() 
     {
@@ -54,18 +57,7 @@
     var xmlhttp3 = new XMLHttpRequest();
     xmlhttp3.onreadystatechange = function() 
     {
-        if (this.readyState == 4 && this.status == 200) 
-        {
-            var app = angular.module("myApp", []);
-            app.controller("myCtrl", function($scope) {
-              $scope.myObj = {
-                "Name" : "Alfreds Futterkiste",
-                "Country" : "Germany",
-                "City" : "Berlin"
-              }
-            });
-       
-        }
+        
     };
     xmlhttp3.open("GET", "https://api.coinmarketcap.com/v2/ticker/?limit=10&sort=rank&structure=array", true);
     xmlhttp3.send();
@@ -75,12 +67,17 @@
     function addComma(strMarketCap) {
         var tempString = [];
         var i;
-        for (i = 0; i < strMarketCap.length; i++) { 
-            if(i == 2 || i == 5 || i == 8) {
-                tempString += strMarketCap[i] + ',';
+        var j = 0; 
+        console.log("strMarketCap is " + strMarketCap.length);
+        for (i = strMarketCap.length; i > 0; i--) { 
+            console.log('i is ' + i);
+            if(i % 3 == 0 && i != strMarketCap.length) {
+                tempString += ',' + strMarketCap[j];
+                j++;
             }
             else { 
-                tempString += strMarketCap[i];
+                tempString += strMarketCap[j];
+                j++;
  
             }
         }
