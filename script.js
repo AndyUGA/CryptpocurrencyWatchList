@@ -15,9 +15,18 @@
             
         document.getElementById("coinName").innerHTML = myArr.data.name;
         
-        var percentChange = String(myArr.data.quotes.USD.percent_change_24h) + '%';
+        var percentValue = myArr.data.quotes.USD.percent_change_24h; 
+        if(percentValue > 0) {
+            document.getElementById("coinChange").innerHTML = String(percentValue) + '%';
+            document.getElementById("coinChange").style.color="green";
+        }
+        else {
+            document.getElementById("coinChange").innerHTML = String(percentValue) + '%';
+            document.getElementById("coinChange").style.color="red";
+        }
+        //var percentChange = String(myArr.data.quotes.USD.percent_change_24h) + '%';
        
-        document.getElementById("coinChange").innerHTML = percentChange;
+        
             
         var marketCap = myArr.data.quotes.USD.market_cap;
         var stringMarketCap = addComma(String(marketCap));
@@ -40,9 +49,15 @@
             
         document.getElementById("coinName2").innerHTML = myArr.data.name;
         
-        var percentChange = String(myArr.data.quotes.USD.percent_change_24h) + '%';
-       
-        document.getElementById("coinChange2").innerHTML = percentChange;
+        var percentValue = myArr.data.quotes.USD.percent_change_24h; 
+        if(percentValue > 0) {
+            document.getElementById("coinChange2").innerHTML = String(percentValue) + '%';
+            document.getElementById("coinChange2").style.color="green";
+        }
+        else {
+            document.getElementById("coinChange2").innerHTML = String(percentValue) + '%';
+            document.getElementById("coinChange2").style.color="red";
+        }
             
         var marketCap = myArr.data.quotes.USD.market_cap;
         var stringMarketCap = addComma(String(marketCap));
