@@ -34,8 +34,8 @@
                 <div class = "box2"> 
                     <b> {{value.quotes.USD.price | currency}}  </b>
                 </div>
-                <div class = "box3" [ngClass] = "{'positive' : true}">
-                    <b> {{value.quotes.USD.percent_change_24h}} </b>
+                <div class = "box3" ng-class = "value.quotes.USD.percent_change_24h > 0 ? 'positive' : 'negative'">
+                    <b> {{value.quotes.USD.percent_change_24h}}% </b>
                 </div>
             </div>        
             <div> 
@@ -50,8 +50,8 @@
                 <div class = "box2"> 
                     <b>  {{value.rank}} </b>
                 </div>
-                <div class = "box3"> 
-                    <b> {{value.quotes.USD.percent_change_1h}} </b>
+                <div class = "box3"  ng-class = "value.quotes.USD.percent_change_24h > 0 ? 'positive' : 'negative'"> 
+                    <b> {{value.quotes.USD.percent_change_1h}}% </b>
                 </div>
             </div>
         </div>
