@@ -3,8 +3,29 @@
     left: 10%;
 }
 
-h1 {
+* {
     font-family: "Helvetica-light";
+}
+
+headerContainer {
+    text-align: center;
+}
+header {
+    float: left;
+   width:33.33333%;
+   text-align:left;
+}
+
+header2 {
+    float: left;
+   width:33.33333%;
+   text-align:center;
+}
+
+header3 {
+    float: left;
+   width:33.33333%;
+   text-align:right;
 }
 
 .icon {

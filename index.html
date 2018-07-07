@@ -16,20 +16,65 @@
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 <body ng-app="myApp" ng-controller="myCtrl">
-    <div class="container-fluid">
-        <center>
+    <div class="container">
+            
             <h1>
-                Cryptocurrency Watch List
+                <center> Simple Crypto </center>
             </h1> 
-            <b>
-                Toatl Market Cap: <a href="https://coinmarketcap.com/charts/">{{global.quotes.USD.total_market_cap | addComma}} 
-                 </a>
-            </b>
-        </center>
+            <div class="card mb-7">
+            <div class = "card-body test"> 
+                <div class = "box1"> 
+                    <b> Name </b> 
+                </div> 
+                <div class = "box2"> 
+                    <b> Price  </b>
+                </div>
+                <div class = "box3" ng-class = "5.04 > 0 ? 'positive' : 'negative'">
+                    <b> 24 Hour Percent Change </b>
+                </div>
+            </div>        
+            <div> 
+                <center> 
+                    <img class="card-img-top icon" ng-src="images/generic.png">
+                </center>
+            </div>
+            <div class="card-body">
+                <div class = "box1"> 
+                    <b  class="card-text"> Market Cap </b>
+                </div> 
+                <div class = "box2"> 
+                    <b> Rank by Market Cap </b>
+                </div>
+                <div class = "box3"  ng-class = "-4.93 > 0 ? 'positive' : 'negative'"> 
+                    <b> 1 Hour Percent Change</b>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div> 
+            <div class = "box1"> 
+                Market Cap: 
+                <a href="https://coinmarketcap.com/charts/">
+                    {{global.quotes.USD.total_market_cap | addComma}} 
+                </a>
+            </div>
+            <div class = "box2"> 
+                Total Cryptocurrencies: 
+                <a href="https://coinmarketcap.com/all/views/all/">
+                    {{global.active_cryptocurrencies}} 
+                </a>
+            </div>
+                <div class = "box3">
+                    BTC Dominance: 
+                <a href="https://coinmarketcap.com/charts/#dominance-percentage">
+                    {{global.bitcoin_percentage_of_market_cap}}% 
+                </a>
+                </div>
+        </div>
     </div>
-    
+    <br><br>
     <div  ng-repeat="(key, value) in myWelcome.data.data" class="container">
-        <div class="card mb-3">
+        <div class="card mb-7">
             <div class = "card-body test"> 
                 <div class = "box1"> 
                     <b> {{value.name }} </b> 
@@ -38,7 +83,7 @@
                     <b> {{value.quotes.USD.price | currency}}  </b>
                 </div>
                 <div class = "box3" ng-class = "value.quotes.USD.percent_change_24h > 0 ? 'positive' : 'negative'">
-                    <b> {{value.quotes.USD.percent_change_24h}}% (24h) </b>
+                    <b> {{value.quotes.USD.percent_change_24h}}% </b>
                 </div>
             </div>        
             <div> 
@@ -48,13 +93,13 @@
             </div>
             <div class="card-body">
                 <div class = "box1"> 
-                    <b  class="card-text"> {{value.quotes.USD.market_cap | addComma}} (MC) </b>
+                    <b  class="card-text"> {{value.quotes.USD.market_cap | addComma}}  </b>
                 </div> 
                 <div class = "box2"> 
                     <b>  {{value.rank }} </b>
                 </div>
                 <div class = "box3"  ng-class = "value.quotes.USD.percent_change_24h > 0 ? 'positive' : 'negative'"> 
-                    <b> {{value.quotes.USD.percent_change_1h}}% (1h)</b>
+                    <b> {{value.quotes.USD.percent_change_1h}}% </b>
                 </div>
             </div>
         </div>
