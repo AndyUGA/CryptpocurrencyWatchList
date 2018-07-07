@@ -29,12 +29,19 @@
                 j++;
             }
         }
-        return tempString;
+        return '$' + tempString;
        } 
        
        
     });
+
+    
+    
+
+
     app.controller('myCtrl', function($scope, $http) {
+        
+        
         
         /*
         * Request data for top 10 cryptocurrencies by total 
@@ -46,8 +53,7 @@
         });
         
         /*
-        * Request data for global information about cryptocurrencies
-        * from CoinMarketCap API
+        * Request data for global information about cryptocurrene 
         */
         $http.get("https://api.coinmarketcap.com/v2/global/")
             .then(function(myArr) {
