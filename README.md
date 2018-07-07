@@ -1,6 +1,6 @@
 # Cryptocurrency Watch List
 
-A personal project that displays the top 10 cryptocurrencies based on total market cap
+A personal website that allows me to see a customized view of each cryptocurrency and only the details that are necessary 
 ------------------------------------------------------------------------------------------------------------------------------  
 
 ## Technologies utitilized in this project:
