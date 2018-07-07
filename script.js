@@ -1,4 +1,4 @@
-
+    /*eslint-env browser*/
 
 
 
@@ -7,7 +7,7 @@
      var testArray = {};
      var carName = "car";
      var x = 0;
-console.log(testArray);
+    console.log(testArray);
 
 
     var xmlhttp = new XMLHttpRequest();
@@ -132,7 +132,7 @@ console.log(testArray);
         
             for(var i = 0; i < keys.length; i++) 
                 {
-                    console.log(myArr[keys[0][0]]);
+                    console.log(myArr[keys[0]]);
                 }
             
         }
