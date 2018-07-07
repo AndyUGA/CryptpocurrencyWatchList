@@ -35,6 +35,11 @@
             .then(function(myArr) {
             $scope.myWelcome = myArr;
         });
+        
+        $http.get("https://api.coinmarketcap.com/v2/global/")
+            .then(function(myArr) {
+            $scope.global = myArr.data.data;
+        });
     });
    
        

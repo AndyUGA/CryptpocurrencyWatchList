@@ -16,12 +16,14 @@
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 <body ng-app="myApp" ng-controller="myCtrl">
-
     <div class="container-fluid">
         <center>
             <h1>
                 Cryptocurrency Watch List
             </h1> 
+            <b>
+                {{global.quotes.USD.total_market_cap | addComma}} 
+            </b>
         </center>
     </div>
     
@@ -58,7 +60,7 @@
     </div>
     
    
-    
+   
 
     </body>
 </html>
