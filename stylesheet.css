@@ -30,10 +30,10 @@
      text-align:right;
 }
 
-.bitcoin {
-    color: orange;
+.negative {
+    color: red;
 }
 
-.neo {
-    color: greenyellow;
+.positive {
+    color: green;
 }

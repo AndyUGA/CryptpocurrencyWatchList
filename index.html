@@ -25,16 +25,16 @@
         </center>
     </div>
     
-    <div ng-repeat="(key, value) in myWelcome.data.data" class="container">
+    <div  ng-repeat="(key, value) in myWelcome.data.data" class="container">
         <div class="card mb-3">
             <div class = "card-body test"> 
                 <div class = "box1"> 
                     <b> {{value.name}} </b> 
                 </div> 
                 <div class = "box2"> 
-                    <b> {{value.quotes.USD.price}} </b>
+                    <b> {{value.quotes.USD.price | currency}}  </b>
                 </div>
-                <div class = "box3"> 
+                <div class = "box3" [ngClass] = "{'positive' : true}">
                     <b> {{value.quotes.USD.percent_change_24h}} </b>
                 </div>
             </div>        
@@ -45,7 +45,7 @@
             </div>
             <div class="card-body">
                 <div class = "box1"> 
-                    <b class="card-text"> {{value.quotes.USD.market_cap}} </b>
+                    <b class="card-text"> {{value.quotes.USD.market_cap | addComma}} </b>
                 </div> 
                 <div class = "box2"> 
                     <b>  {{value.rank}} </b>
