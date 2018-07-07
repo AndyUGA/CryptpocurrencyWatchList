@@ -21,4 +21,4 @@ A personal website that allows me to see a customized view of cryptocurrencies i
 - Responsive design 
 ---------------------------------------------------------------------------------------------------------------------------
 ## Live Preview
-http://cobweb.cs.uga.edu/~truong/watchlist
+http://cobweb.cs.uga.edu/~truong/simplecrypto/
