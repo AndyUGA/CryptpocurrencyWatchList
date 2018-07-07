@@ -22,7 +22,7 @@
                 Cryptocurrency Watch List
             </h1> 
             <b>
-                Toatl Market Cap: <a href="https://coinmarketcap.com/charts/">{{global.quotes.USD.total_market_cap | addComma}} 
+                Toatl Market Cap: <a href="https://coinmarketcap.com/charts/">{{global.quotes.USD.total_market_cap | currency}} 
                  </a>
             </b>
         </center>
@@ -31,7 +31,7 @@
     <div  ng-repeat="(key, value) in myWelcome.data.data" class="container">
         <div class="card mb-3">
             <div class = "card-body test"> 
-                <div class = "box1"> 
+                <div class = "box1" ng-class = "value.symbol == 'BTC' ? 'bitcoin' : 'nothing'"> 
                     <b> {{value.name}} </b> 
                 </div> 
                 <div class = "box2"> 
@@ -48,7 +48,7 @@
             </div>
             <div class="card-body">
                 <div class = "box1"> 
-                    <b class="card-text"> {{value.quotes.USD.market_cap | addComma}} </b>
+                    <b class="card-text"> {{value.quotes.USD.market_cap | currency}} </b>
                 </div> 
                 <div class = "box2"> 
                     <b>  {{value.rank}} </b>
