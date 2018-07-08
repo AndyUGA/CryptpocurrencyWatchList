@@ -1,4 +1,6 @@
-# Simple Crypto 
+![Image](https://forexrank.co/wp-content/uploads/2018/03/crypto.png
+)
+# Simple Crypto   
 
 A personal website that allows me to see a customized view of cryptocurrencies in an organized and clean layout. 
 
