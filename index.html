@@ -89,6 +89,7 @@
                 <center> 
                     <img class="card-img-top icon" ng-src="images/{{value.symbol}}.png">
                 </center>
+                    <img class="card-img-top icon" ng-src="https://s2.coinmarketcap.com/generated/sparklines/web/7d/usd/{{value.id}}.png">
             </div>
             <div class="card-body">
                 <div class = "box1"> 
@@ -97,7 +98,7 @@
                 <div class = "box2"> 
                     <b>  {{value.rank }} </b>
                 </div>
-                <div class = "box3"  ng-class = "value.quotes.USD.percent_change_24h > 0 ? 'positive' : 'negative'"> 
+                <div class = "box3"  ng-class = "value.quotes.USD.percent_change_1h > 0 ? 'positive' : 'negative'"> 
                     <b> {{value.quotes.USD.percent_change_1h}}% </b>
                 </div>
             </div>
