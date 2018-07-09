@@ -82,7 +82,12 @@
     
     
     <br><br>
-    <div  ng-repeat="(key, value) in myWelcome.data.data" class="container">
+    
+    <div class=" form-group has-feedback container">
+        <input type = "text" class = "form-control" ng-model = "search" placeholder="Search "> 
+        <i class = "glyphicon glyphicon-search form-control-feedback"> </i>
+    </div>
+    <div  ng-repeat="(key, value) in myWelcome.data.data | filter: search" class="container">
         <div class="card mb-7">
             <div class = "card-body test"> 
                 <div class = "box1"> 
