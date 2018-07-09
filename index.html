@@ -40,7 +40,7 @@
             </div>
             <div class="card-body">
                 <div class = "box1"> 
-                    <b  class="card-text"> Market Cap </b>
+                    <b class="card-text"> Market Cap </b>
                 </div> 
                 <div class = "box2"> 
                     <b> Rank by Market Cap </b>
@@ -51,26 +51,36 @@
             </div>
         </div>
         <br>
-        <div> 
-            <div class = "box1"> 
-                Market Cap: 
-                <a href="https://coinmarketcap.com/charts/">
+        <div class="card mb-7">
+            <div class = "card-body test"> 
+                <div class = "box1"> 
+                    <img class = "icon2" src = "https://image.flaticon.com/icons/svg/189/189093.svg">
+                    <b> Market Cap: <a href="https://coinmarketcap.com/charts/">
                     {{global.quotes.USD.total_market_cap | addComma}} 
+                </a> </b> 
+                </div> 
+                <div class = "box2">
+                    <img class = "icon2" src = "https://cdn2.iconfinder.com/data/icons/bitcoin-and-mining/44/trade-512.png">
+                    <b> Active Currencies:
+                        <a href="https://coinmarketcap.com/all/views/all/">
+                    {{global.active_cryptocurrencies}} 
                 </a>
-            </div>
-            <div class = "box2"> 
-                <p>
-                    
-                </p>
-            </div>
-                <div class = "box3">
-                    BTC Dominance: 
-                <a href="https://coinmarketcap.com/charts/#dominance-percentage">
-                    {{global.bitcoin_percentage_of_market_cap}}% 
-                </a>
+                    </b>
                 </div>
+                <div class = "box3">
+                    <img class = "icon2" src = "https://image.flaticon.com/icons/png/512/46/46775.png
+">
+                    <b> BTC Dominance: 
+                    <a href="https://coinmarketcap.com/charts/#dominance-percentage">
+                    {{global.bitcoin_percentage_of_market_cap}}% 
+                </a></b>
+                </div>
+            </div>        
+          
         </div>
     </div>
+    
+    
     <br><br>
     <div  ng-repeat="(key, value) in myWelcome.data.data" class="container">
         <div class="card mb-7">
