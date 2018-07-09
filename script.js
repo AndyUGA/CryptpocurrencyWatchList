@@ -67,14 +67,6 @@
        
     
 
-
-
-
-
-
-
-
-
  function addComma(strMarketCap) {
         var tempString = [];
         var i;
