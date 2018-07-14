@@ -17,7 +17,8 @@
 </head>
 <body ng-app="myApp" ng-controller="myCtrl">
     <div class="container">
-            
+            <input ng-model="testNum">
+        <p> {{testNum}}</p>
             <h1>
                 <center> Simple Crypto </center>
             </h1> 
@@ -27,10 +28,10 @@
                     <b> Name </b> 
                 </div> 
                 <div class = "box2"> 
-                    <b> Price  </b>
+                    <b class = "positive"> Price  </b>
                 </div>
-                <div class = "box3" ng-class = "5.04 > 0 ? 'positive' : 'negative'">
-                    <b> 24 Hour Percent Change </b>
+                <div class = "box3">
+                    <b ng-class = "myWelcome.data.data[0].quotes.USD.percent_change_24h > 0 ? 'positive' : 'negative'"> 24 Hour Percent Change </b>
                 </div>
             </div>        
             <div> 
@@ -45,8 +46,8 @@
                 <div class = "box2"> 
                     <b> Volume (24h) </b>
                 </div>
-                <div class = "box3"  ng-class = "-4.93 > 0 ? 'positive' : 'negative'"> 
-                    <b> 1 Hour Percent Change</b>
+                <div class = "box3"> 
+                    <b ng-class = "myWelcome.data.data[0].quotes.USD.percent_change_1h > 0 ? 'positive' : 'negative'"> 1 Hour Percent Change</b>
                 </div>
             </div>
         </div>
@@ -94,7 +95,7 @@
                     <b> {{value.name }} </b> 
                 </div> 
                 <div class = "box2"> 
-                    <b> {{value.quotes.USD.price | currency}}  </b>
+                    <b class = "positive"> {{value.quotes.USD.price | currency}}  </b>
                 </div>
                 <div class = "box3" ng-class = "value.quotes.USD.percent_change_24h > 0 ? 'positive' : 'negative'">
                     <b> {{value.quotes.USD.percent_change_24h}}% </b>
