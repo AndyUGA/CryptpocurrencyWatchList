@@ -1,7 +1,3 @@
-.foo {
-    position: relative;
-    left: 10%;
-}
 
 * {
    font-family: "Helvetica-Light", Arial;
@@ -71,10 +67,6 @@ header3 {
     color: #009e73;
 }
 
-.bitcoin {
-    color: orange;
-}
 
-.priceColor {
-    color: #00c853;
-}
+
+
