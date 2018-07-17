@@ -24,13 +24,13 @@
             <div class="card mb-7">
             <div class = "card-body test"> 
                 <div class = "box1"> 
-                    <b ng-class = "myWelcome.data.data[0].quotes.USD.percent_change_1h > 0 ? 'positive' : 'negative'" > Name </b> 
+                    <b> Name </b> 
                 </div> 
                 <div class = "box2"> 
-                    <b ng-class = "myWelcome.data.data[0].quotes.USD.percent_change_1h > 0 ? 'positive' : 'negative'"> Price  </b>
+                    <b> Price  </b>
                 </div>
                 <div class = "box3">
-                    <b ng-class = "myWelcome.data.data[0].quotes.USD.percent_change_1h > 0 ? 'positive' : 'negative'"> 1 Hour Percent Change</b>
+                    <b> 1 Hour Percent Change</b>
                 </div>
             </div>        
             <div> 
@@ -40,14 +40,14 @@
             </div>
             <div class="card-body">
                 <div class = "box1"> 
-                    <b ng-class = "myWelcome.data.data[0].quotes.USD.percent_change_24h > 0 ? 'positive' : 'negative'"> Market Cap </b>
+                    <b> Market Cap </b>
                 </div> 
                 <div class = "box2"> 
-                    <b ng-class = "myWelcome.data.data[0].quotes.USD.percent_change_24h > 0 ? 'positive' : 'negative'"> Volume (24h) </b>
+                    <b> Volume (24h) </b>
                 </div>
                 <div class = "box3"> 
                     
-                    <b ng-class = "myWelcome.data.data[0].quotes.USD.percent_change_24h > 0 ? 'positive' : 'negative'"> 24 Hour Percent Change </b>
+                    <b> 24 Hour Percent Change </b>
                 </div>
             </div>
         </div>
@@ -92,13 +92,13 @@
         <div class="card mb-7">
             <div class = "card-body test"> 
                 <div class = "box1"> 
-                    <b ng-class = "value.quotes.USD.percent_change_1h > 0 ? 'positive' : 'negative'"> {{value.name }} </b> 
+                    <b> {{value.name }} </b> 
                 </div> 
                 <div class = "box2"> 
-                    <b ng-class = "value.quotes.USD.percent_change_1h > 0 ? 'positive' : 'negative'"> {{value.quotes.USD.price | currency}}  </b>
+                    <b> {{value.quotes.USD.price | currency}}  </b>
                 </div>
                 
-                <div class = "box3"  ng-class = "value.quotes.USD.percent_change_1h > 0 ? 'positive' : 'negative'"> 
+                <div class = "box3" ng-class = "value.quotes.USD.percent_change_1h > 0 ? 'positive' : 'negative'"> 
                     <b> {{value.quotes.USD.percent_change_1h}}% </b>
                 </div>
             </div>        
@@ -111,10 +111,10 @@
             </div>
             <div class="card-body">
                 <div class = "box1"> 
-                    <b ng-class = "value.quotes.USD.percent_change_24h > 0 ? 'positive' : 'negative'"> {{value.quotes.USD.market_cap | addComma}}  </b>
+                    <b> {{value.quotes.USD.market_cap | addComma}}  </b>
                 </div> 
                 <div class = "box2"> 
-                    <b  ng-class = "value.quotes.USD.percent_change_24h > 0 ? 'positive' : 'negative'">  {{value.quotes.USD.volume_24h | addComma }} </b>
+                    <b>  {{value.quotes.USD.volume_24h | addComma }} </b>
                 </div>
                 <div class = "box3" ng-class = "value.quotes.USD.percent_change_24h > 0 ? 'positive' : 'negative'">
                     <b> {{value.quotes.USD.percent_change_24h}}% </b>
