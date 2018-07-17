@@ -17,9 +17,9 @@ A personal website that allows me to see a customized view of cryptocurrencies i
 ---------------------------------------------------------------------------------------------------------------------------
 
 ## Features
-- Displays the current top 20 cryptocurrencies from highest market cap to lowest market cap 
+- Displays the current top 100 cryptocurrencies from highest market cap to lowest market cap 
 - Percent changes (24 hour and 1 hour) dynamically change color based on negative or positve change 
-- Icon dynamically changes based on specific cryptocurrency 
+- Utilizes Bootstrap flexible and extensible card component  
 - Responsive design 
 ---------------------------------------------------------------------------------------------------------------------------
 ## Live Preview
