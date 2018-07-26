@@ -10,17 +10,17 @@ A personal website that allows me to see a customized view of cryptocurrencies i
 - HTML
 - CSS
 - Javascript
-- [Bootstrap](https://getbootstrap.com) - Used for responsive design and layout structure
-- [AngularJS](https://angularjs.org/) - Used for template layout and requesting data from CoinMarketCap API
-- [CoinMarketCap API](https://coinmarketcap.com/api/) - Used to pull live data of coin's price
+- [Bootstrap](https://getbootstrap.com) 
+- [AngularJS](https://angularjs.org/)
+- [CoinMarketCap API](https://coinmarketcap.com/api/) 
 
 ---------------------------------------------------------------------------------------------------------------------------
 
 ## Features
-- Displays the current top 100 cryptocurrencies from highest market cap to lowest market cap 
-- Percent changes (24 hour and 1 hour) dynamically change color based on negative or positve change 
-- Utilizes Bootstrap flexible and extensible card component  
-- Responsive design 
+- Utilize AngularJS $http service to retrieve data from CoinMarketCap API
+- Utilize AngularJS NgClass Directive to dynamically modify font color
+- Utilize Bootstrap's card component for the layout structure 
+- Utilize Bootstrap Grid System to design responsive website
 ---------------------------------------------------------------------------------------------------------------------------
 ## Live Preview
 http://cobweb.cs.uga.edu/~truong/simplecrypto/
