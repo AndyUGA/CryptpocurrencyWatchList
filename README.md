@@ -2,7 +2,7 @@
 )
 # Simple Crypto   
 
-A personal website that allows me to the top cryptocurrencies in an organized and clean layout. 
+A personal website that allows me to view the top cryptocurrencies in an organized and clean layout. 
 
 ------------------------------------------------------------------------------------------------------------------------------  
 
