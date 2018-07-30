@@ -2,7 +2,7 @@
 )
 # Simple Crypto   
 
-A personal website that allows me to see a customized view of cryptocurrencies in an organized and clean layout. 
+A personal website that allows me to the top cryptocurrencies in an organized and clean layout. 
 
 ------------------------------------------------------------------------------------------------------------------------------  
 
@@ -19,7 +19,8 @@ A personal website that allows me to see a customized view of cryptocurrencies i
 ## Features
 - Utilize AngularJS $http service to retrieve data from CoinMarketCap API
 - Utilize AngularJS NgClass Directive to dynamically modify font color
-- Utilize Bootstrap's card component for the layout structure 
+- Utilize AngularJS ngRepeat to instantiate a template for each cryptocurrency 
+- Utilize Bootstrap's card component for the base layout structure to display each cryptocurrency 
 - Utilize Bootstrap Grid System to design responsive website
 ---------------------------------------------------------------------------------------------------------------------------
 ## Live Preview
