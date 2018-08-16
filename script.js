@@ -36,25 +36,34 @@
     });
 
     
-    
+   
 
 
     app.controller('myCtrl', function($scope, $http, $timeout) {
         
+        $scope.redditFilter = "20";
+        $scope.names = ["10", "20", "50", "100"];
+        
         
         
         /*
-        * Request data for top 20 cryptocurrencies by total 
+        * Request data for top 100 cryptocurrencies by total 
         * marketcap from CoinMarketCap API
         */
-        $http.get("https://api.coinmarketcap.com/v2/ticker/?limit=100&sort=rank&structure=array")
+        $http.get("https://api.coinmarketcap.com/v2/ticker/?limit=" + $scope.redditFilter + "&sort=rank&structure=array")
             .then(function(myArr) {
             $scope.myWelcome = myArr;
         });
         
+        $scope.onChange = function() {
+            $http.get("https://api.coinmarketcap.com/v2/ticker/?limit=" + $scope.redditFilter + "&sort=rank&structure=array")
+            .then(function(myArr) {
+                console.log(myArr);
+            $scope.myWelcome = myArr;
+        });
+        }
         
-        
-        
+            
         
         
         
@@ -72,31 +81,3 @@
     });
    
        
-    
-
-
-
-
-
-
-
-
-
- function addComma(strMarketCap) {
-        var tempString = [];
-        var i;
-        var j = 0; 
-        for (i = strMarketCap.length; i > 0; i--) { 
-            
-            if(i % 3 == 0 && i != strMarketCap.length) {
-                tempString += ',' + strMarketCap[j];
-                j++;
-            }
-            else { 
-                tempString += strMarketCap[j];
-                j++;
- 
-            }
-        }
-        return tempString;
-    } 

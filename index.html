@@ -79,6 +79,7 @@
             </div>        
           
         </div>
+        
     </div>
     
     
@@ -86,8 +87,13 @@
     
     <div class=" form-group has-feedback container">
         <input type = "text" class = "form-control" ng-model = "search" placeholder="Search Coins "> 
-        <i class = "glyphicon glyphicon-search form-control-feedback"> </i>
+        <i class = "glyphicon glyphicon-search form-control-feedback"> </i>   
     </div>
+    
+    <center>
+     <select ng-model="redditFilter" ng-change = "onChange()" ng-options="x for x in names" >
+        </select>
+     </center>
     <div  ng-repeat="(key, value) in myWelcome.data.data | filter: search" class="container">
         <div class="card mb-7">
             <div class = "card-body test"> 
