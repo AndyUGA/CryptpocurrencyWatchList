@@ -20,6 +20,7 @@ A personal website that allows me to view the top cryptocurrencies in an organiz
 - Utilize AngularJS $http service to retrieve data from CoinMarketCap API
 - Utilize AngularJS NgClass Directive to dynamically modify font color
 - Utilize AngularJS ngRepeat to instantiate a template for each cryptocurrency 
+- Utilize AngularJS ngoption to allow user to select how many cryptocurrencies to display
 - Utilize Bootstrap's card component for the base layout structure to display each cryptocurrency 
 - Utilize Bootstrap Grid System to design responsive website
 ---------------------------------------------------------------------------------------------------------------------------
