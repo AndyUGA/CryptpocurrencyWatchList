@@ -41,7 +41,7 @@
 
     app.controller('myCtrl', function($scope, $http, $timeout) {
         
-        $scope.redditFilter = "20";
+        $scope.redditFilter = "50";
         $scope.names = ["10", "20", "50", "100"];
         
         
