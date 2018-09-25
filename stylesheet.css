@@ -9,20 +9,20 @@ headerContainer {
 
 header {
     float: left;
-   width:33.33333%;
-   text-align:left;
+    width:33.33333%;
+    text-align:left;
 }
 
 header2 {
     float: left;
-   width:33.33333%;
-   text-align:center;
+    width:33.33333%;
+    text-align:center;
 }
 
 header3 {
     float: left;
-   width:33.33333%;
-   text-align:right;
+    width:33.33333%;
+    text-align:right;
 }
 
 .icon {
@@ -36,21 +36,16 @@ header3 {
     height: 30px;
 }
 
-.test {
-    text-align: center;
-}
-
 .box1 {
    float: left;
    width:33.33333%;
    text-align:left;
 }
 
-.box2 {
-    
-      float: left;
-      width:33.33333%;
-      text-align:center
+.box2 { 
+    float: left;
+    width:33.33333%;
+    text-align:center
 }
 
 .box3 {
