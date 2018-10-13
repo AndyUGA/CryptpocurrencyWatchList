@@ -41,7 +41,7 @@
 
     app.controller('myCtrl', function($scope, $http, $timeout) {
         
-        $scope.redditFilter = "50";
+        $scope.numCrypto = "50";
         $scope.names = ["10", "20", "50", "100"];
         
         
@@ -50,13 +50,13 @@
         * Request data for top 100 cryptocurrencies by total 
         * marketcap from CoinMarketCap API
         */
-        $http.get("https://api.coinmarketcap.com/v2/ticker/?limit=" + $scope.redditFilter + "&sort=rank&structure=array")
+        $http.get("https://api.coinmarketcap.com/v2/ticker/?limit=" + $scope.numCrypto + "&sort=rank&structure=array")
             .then(function(myArr) {
             $scope.myWelcome = myArr;
         });
         
         $scope.onChange = function() {
-            $http.get("https://api.coinmarketcap.com/v2/ticker/?limit=" + $scope.redditFilter + "&sort=rank&structure=array")
+            $http.get("https://api.coinmarketcap.com/v2/ticker/?limit=" + $scope.numCrypto + "&sort=rank&structure=array")
             .then(function(myArr) {
                 console.log(myArr);
             $scope.myWelcome = myArr;
