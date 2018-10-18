@@ -63,6 +63,14 @@
         });
         }
         
+        $scope.onChange2 = function(num) {
+            $http.get("https://api.coinmarketcap.com/v2/ticker/?limit=" + num + "&sort=rank&structure=array")
+            .then(function(myArr) {
+                console.log(myArr);
+            $scope.myWelcome = myArr;
+        });
+        }
+        
             
         
         
