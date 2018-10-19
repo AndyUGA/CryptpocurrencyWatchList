@@ -37,7 +37,16 @@
 
     
    
+function myFunction() {
+    // Get the snackbar DIV
+    var x = document.getElementById("snackbar");
 
+    // Add the "show" class to DIV
+    x.className = "show";
+
+    // After 3 seconds, remove the show class from DIV
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
 
     app.controller('myCtrl', function($scope, $http, $timeout) {
         
@@ -66,6 +75,7 @@
         $scope.onChange2 = function(num) {
             $http.get("https://api.coinmarketcap.com/v2/ticker/?limit=" + num + "&sort=rank&structure=array")
             .then(function(myArr) {
+
                 console.log(myArr);
             $scope.myWelcome = myArr;
         });

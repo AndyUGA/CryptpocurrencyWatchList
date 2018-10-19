@@ -26,7 +26,10 @@
             <ul class="navbar-nav mr-auto">
 
                 <li class="nav-item">
-                    <a ng-click="onChange2(100)" ng-model="numCrypto" class="nav-link"> Top 100 Coins</a>
+                    <a ng-click="onChange2(100)" ng-model="numCrypto" class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"> Top 100 Coins</a>
+                    <a ng-click="onChange2(50)" ng-model="numCrypto" class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"> Top 50 Coins</a>
+                    <a ng-click="onChange2(20)" ng-model="numCrypto" class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"> Top 20 Coins</a>
+                    <a ng-click="onChange2(10)" ng-model="numCrypto" class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"> Top 10 Coins</a>
                 </li>
 
               
@@ -107,11 +110,15 @@
         <i class = "glyphicon glyphicon-search form-control-feedback"> </i>   
     </div>
     
+    <div id="snackbar">Some text some message..</div>
+    
+    <!--
     <center>
         Select number of cryptocurrencies to display:
      <select ng-model="numCrypto" ng-change = "onChange()" ng-options="x for x in names" >
         </select>
      </center>
+    --> 
     <div  ng-repeat="(key, value) in myWelcome.data.data | filter: search" class="container">
         <div class="card mb-7">
             <div class = "card-body test"> 
