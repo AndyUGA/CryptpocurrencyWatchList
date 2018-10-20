@@ -26,10 +26,10 @@
             <ul class="navbar-nav mr-auto">
 
                 <li class="nav-item">
-                    <a ng-click="onChange2(100);myFunction()" ng-model="numCrypto" class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"> Top 100 Coins</a>
-                    <a ng-click="onChange2(50)" ng-model="numCrypto" class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"> Top 50 Coins</a>
-                    <a ng-click="onChange2(20)" ng-model="numCrypto" class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"> Top 20 Coins</a>
-                    <a ng-click="onChange2(10)" ng-model="numCrypto" class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"> Top 10 Coins</a>
+                    <a ng-click="onChange2(100)" onclick="myFunction()" ng-model="numCrypto" class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"> Top 100 Coins</a>
+                    <a ng-click="onChange2(50)" onclick="myFunction()" ng-model="numCrypto" class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"> Top 50 Coins</a>
+                    <a ng-click="onChange2(20)" onclick="myFunction()" ng-model="numCrypto" class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"> Top 20 Coins</a>
+                    <a ng-click="onChange2(10)" onclick="myFunction()" ng-model="numCrypto" class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"> Top 10 Coins</a>
                 </li>
 
               
@@ -37,10 +37,11 @@
 
         </div>
     </nav>
+    
 <body ng-app="myApp" ng-controller="myCtrl">
     <div class="container">
            
-            
+
             <div class="card mb-7">
             <div class = "card-body test"> 
                 <div class = "box1"> 
@@ -110,7 +111,7 @@
         <i class = "glyphicon glyphicon-search form-control-feedback"> </i>   
     </div>
     
-    <div id="snackbar">Some text some message..</div>
+    <div id="snackbar">Coin List Updated!!!</div>
     
     <!--
     <center>
