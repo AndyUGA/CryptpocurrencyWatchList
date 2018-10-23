@@ -114,13 +114,7 @@
     
     <div id="snackbar">Coin List Updated</div>
     
-    <!--
-    <center>
-        Select number of cryptocurrencies to display:
-     <select ng-model="numCrypto" ng-change = "onChange()" ng-options="x for x in names" >
-        </select>
-     </center>
-    --> 
+ 
     <div  ng-repeat="(key, value) in myWelcome.data.data | filter: search" class="container">
         <div class="card mb-7">
             <div class = "card-body test"> 

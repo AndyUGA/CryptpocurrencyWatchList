@@ -1,11 +1,6 @@
     /*eslint-env browser*/
 
 
-
-
-
-
-
     var app = angular.module('myApp', []);
     app.filter('addComma', function() {
         
@@ -39,13 +34,13 @@
    
 function myFunction() {
     // Get the snackbar DIV
-    var x = document.getElementById("snackbar");
+    var toastNotification = document.getElementById("snackbar");
 
     // Add the "show" class to DIV
-    x.className = "show";
+    toastNotification.className = "show";
 
     // After 3 seconds, remove the show class from DIV
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+    setTimeout(function(){ toastNotification.className = toastNotification.className.replace("show", ""); }, 3000);
 }
 
     app.controller('myCtrl', function($scope, $http, $timeout) {
