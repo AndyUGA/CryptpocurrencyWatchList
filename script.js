@@ -46,7 +46,7 @@ function showToast() {
 
     app.controller('myCtrl', function($scope, $http, $timeout) {
         
-        $scope.numCrypto = "50";
+        $scope.numCrypto = "10";
         $scope.names = ["10", "20", "50", "100"];
         
         
