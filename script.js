@@ -32,8 +32,9 @@
 
     
    
-function myFunction() {
+function showToast() {
     // Get the snackbar DIV
+
     var toastNotification = document.getElementById("snackbar");
 
     // Add the "show" class to DIV
