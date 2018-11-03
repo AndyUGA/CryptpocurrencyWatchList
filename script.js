@@ -47,7 +47,7 @@ function showToast() {
     app.controller('myCtrl', function($scope, $http, $timeout) {
         
         $scope.numCrypto = "10";
-        $scope.names = ["10", "20", "50", "100"];
+
         
         
         
@@ -60,19 +60,14 @@ function showToast() {
             $scope.myWelcome = myArr;
         });
         
-        $scope.onChange = function() {
-            $http.get("https://api.coinmarketcap.com/v2/ticker/?limit=" + $scope.numCrypto + "&sort=rank&structure=array")
-            .then(function(myArr) {
-                console.log(myArr);
-            $scope.myWelcome = myArr;
-        });
-        }
+      
         
-        $scope.onChange2 = function(num) {
-            $http.get("https://api.coinmarketcap.com/v2/ticker/?limit=" + num + "&sort=rank&structure=array")
+        $scope.getCoinData = function(num) {
+            var httpRequest = "https://api.coinmarketcap.com/v2/ticker/?limit=" + num + "&sort=rank&structure=array";
+            $http.get(httpRequest)
             .then(function(myArr) {
-
-                console.log(myArr);
+                
+                console.log(httpRequest);
             $scope.myWelcome = myArr;
         });
         }
