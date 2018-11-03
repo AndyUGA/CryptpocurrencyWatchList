@@ -46,10 +46,9 @@ function showToast() {
 
     app.controller('myCtrl', function($scope, $http, $timeout) {
         
+        //Sets default number of coins to 10;
         $scope.numCrypto = "10";
 
-        
-        
         
         /*
         * Request data for top 100 cryptocurrencies by total 
