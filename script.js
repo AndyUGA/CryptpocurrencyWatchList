@@ -31,18 +31,18 @@
     });
 
     
-   
-function showToast() {
-    // Get the snackbar DIV
 
-    var toastNotification = document.getElementById("snackbar");
+    function showToast() {
+        // Get the snackbar DIV
 
-    // Add the "show" class to DIV
-    toastNotification.className = "show";
+        var toastNotification = document.getElementById("snackbar");
 
-    // After 3 seconds, remove the show class from DIV
-    setTimeout(function(){ toastNotification.className = toastNotification.className.replace("show", ""); }, 3000);
-}
+        // Add the "show" class to DIV
+        toastNotification.className = "show";
+
+        // After 3 seconds, remove the show class from DIV
+        setTimeout(function(){ toastNotification.className = toastNotification.className.replace("show", ""); }, 3000);
+    }
 
     app.controller('myCtrl', function($scope, $http, $timeout) {
         
@@ -62,6 +62,7 @@ function showToast() {
       
         
         $scope.getCoinData = function(num) {
+            $scope.numCrypto = num;
             var httpRequest = "https://api.coinmarketcap.com/v2/ticker/?limit=" + num + "&sort=rank&structure=array";
             $http.get(httpRequest)
             .then(function(myArr) {
