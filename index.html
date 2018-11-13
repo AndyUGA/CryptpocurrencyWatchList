@@ -37,11 +37,24 @@
 
         </div>
     </nav>
-    
+
+    <div class="example1">
+        <h3>
+            <center> 
+                <p> 
+                    Displaying Top 
+                    <b class = "currentNum"> 
+                        {{numCrypto}} 
+                    </b> 
+                    Cryptocurrencies 
+                </p>
+            </center>
+        </h3>
+    </div>
 <body ng-app="myApp" ng-controller="myCtrl">
     <div class="container">
            
-        <br>
+        
             <div class="card mb-7">
             <div class = "card-body test"> 
                 <div class = "box1"> 
@@ -114,9 +127,7 @@
     <div id="snackbar">Coin List Updated</div>
     
 
-    <div class="example1">
-<h3><center> <p> Displaying Top <b class = "currentNum"> {{numCrypto}} </b> Cryptocurrencies </p></center></h3>
-</div>
+    
  
     <div  ng-repeat="(key, value) in myWelcome.data.data | filter: search" class="container">
         <div class="card mb-7">
