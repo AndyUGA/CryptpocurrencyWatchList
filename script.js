@@ -48,7 +48,7 @@
         
         //Sets default number of coins to 10;
         $scope.numCrypto = "10";
-
+        
         
         /*
         * Request data for top 100 cryptocurrencies by total 
@@ -56,6 +56,7 @@
         */
         $http.get("https://api.coinmarketcap.com/v2/ticker/?limit=" + $scope.numCrypto + "&sort=rank&structure=array")
             .then(function(myArr) {
+            console.log('59');
             $scope.myWelcome = myArr;
         });
         
@@ -67,10 +68,13 @@
             $http.get(httpRequest)
             .then(function(myArr) {
                 
-                console.log(httpRequest);
+            console.log('71');
             $scope.myWelcome = myArr;
         });
         }
+        
+
+        
         
             
         
