@@ -26,4 +26,4 @@ A personal website that allows me to view the top cryptocurrencies in an organiz
 - Utilize Bootstrap Grid System to design responsive website
 ---------------------------------------------------------------------------------------------------------------------------
 ## Live Preview
-http://cobweb.cs.uga.edu/~truong/simplecrypto/
+https://wizardly-williams-8eb2ef.netlify.com
