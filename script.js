@@ -26,15 +26,12 @@
         }
         return '$' + tempString;
        } 
-       
-       
     });
 
     
 
     function showToast() {
         // Get the snackbar DIV
-
         var toastNotification = document.getElementById("snackbar");
 
         // Add the "show" class to DIV
@@ -55,38 +52,32 @@
         * marketcap from CoinMarketCap API
         */
         $http.get("https://api.coinmarketcap.com/v2/ticker/?limit=" + $scope.numCrypto + "&sort=rank&structure=array")
-            .then(function(myArr) {
-            console.log('59');
-            $scope.myWelcome = myArr;
+            .then(function(res) {
+
+            //Stores response of API call 
+            $scope.cryptoData = res;
         });
         
       
-        
+        /*
+        * Retrives cryptocurreny data based on nav bar links 
+        */
         $scope.getCoinData = function(num) {
-            $scope.numCrypto = num;
+
             var httpRequest = "https://api.coinmarketcap.com/v2/ticker/?limit=" + num + "&sort=rank&structure=array";
             $http.get(httpRequest)
-            .then(function(myArr) {
+            .then(function(res) {
                 
-            console.log('71');
-            $scope.myWelcome = myArr;
+            $scope.cryptoData = res;
         });
         }
-        
-
-        
-        
-            
-        
-        
-        
         
         /*
         * Request data for global information about cryptocurrene 
         */
         $http.get("https://api.coinmarketcap.com/v2/global/")
-            .then(function(myArr) {
-            $scope.global = myArr.data.data;
+            .then(function(res) {
+            $scope.global = res.data.data;
         });
         
         
