@@ -31,6 +31,7 @@
     
 
     function showToast() {
+        
         // Get the snackbar DIV
         var toastNotification = document.getElementById("snackbar");
 
