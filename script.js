@@ -31,6 +31,7 @@
     
 
     function showToast() {
+        
         // Get the snackbar DIV
         var toastNotification = document.getElementById("snackbar");
 
@@ -73,7 +74,7 @@
         }
         
         /*
-        * Request data for global information about cryptocurrene 
+        * Request data for global information about cryptocurrency 
         */
         $http.get("https://api.coinmarketcap.com/v2/global/")
             .then(function(res) {
