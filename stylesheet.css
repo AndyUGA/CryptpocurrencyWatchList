@@ -74,14 +74,7 @@
 	animation-duration: 1.2s;
 }
 
-@keyframes fadeInOpacity {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
+
 
 .responsive  {
     width: 100%;
