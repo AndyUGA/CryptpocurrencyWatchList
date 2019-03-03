@@ -1,156 +1,107 @@
-
-
 <!DOCTYPE html>
-<html class = "fade-in">
-<head>
-    <title> Simple Crypto </title>
-  
-        
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<html class="fade-in">
+  <head>
+    <title>Simple Crypto</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <script type = "text/javascript" src = "script.js"> </script>
-    <script type = "text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-   
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    
-   
 
-    
-</head>
-    
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">Simple Crypto</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+  </head>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">Simple Crypto</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-                    <a ng-click="getCoinData(100)" onclick="showToast()" ng-model="numCrypto" class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"> Top 100 Coins</a>
-                    <a ng-click="getCoinData(50)" onclick="showToast()" ng-model="numCrypto" class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"> Top 50 Coins</a>
-                    <a ng-click="getCoinData(20)" onclick="showToast()" ng-model="numCrypto" class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"> Top 20 Coins</a>
-                    <a ng-click="getCoinData(10)" onclick="showToast()" ng-model="numCrypto" class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"> Top 10 Coins</a>
-            </ul>
-        </div>
-    </nav>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <a ng-click="getCoinData(100)" onclick="showToast()" ng-model="numCrypto" class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"> Top 100 Coins</a>
+        <a ng-click="getCoinData(50)" onclick="showToast()" ng-model="numCrypto" class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"> Top 50 Coins</a>
+        <a ng-click="getCoinData(20)" onclick="showToast()" ng-model="numCrypto" class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"> Top 20 Coins</a>
+        <a ng-click="getCoinData(10)" onclick="showToast()" ng-model="numCrypto" class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"> Top 10 Coins</a>
+      </ul>
+    </div>
+  </nav>
 
-    
-<body ng-app="myApp" ng-controller="myCtrl">
+  <body ng-app="myApp" ng-controller="myCtrl">
     <div class="container">
-            <br>
-        <div class="card mb-7">
-            <div class = "card-body test"> 
-                <div class = "box1"> 
-                    <b> Name </b> 
-                </div> 
-                <div class = "box2"> 
-                    <b> Price  </b>
-                </div>
-                <div class = "box3">
-                    <b> 1 Hour Percent Change</b>
-                </div>
-            </div>        
-            <div> 
-                <center> 
-                    <img class="card-img-top icon" ng-src="images/generic.png">
-                </center>
-            </div>
-            <div class="card-body">
-                <div class = "box1"> 
-                    <b> Total Market Cap </b>
-                </div> 
-                <div class = "box2"> 
-                    <b> Volume (24h) </b>
-                </div>
-                <div class = "box3"> 
-                    
-                    <b> 24 Hour Percent Change </b>
-                </div>
-            </div>
+      <br />
+      <div class="card mb-7">
+        <div class="card-body test">
+          <div class="box1"><b> Name </b></div>
+          <div class="box2"><b> Price </b></div>
+          <div class="box3"><b> 1 Hour Percent Change</b></div>
         </div>
-        <br>
-        <div class="card mb-7">
-            <div class = "card-body test"> 
-                <div class = "box1"> 
-                    <img class = "icon2" src = "https://image.flaticon.com/icons/svg/189/189093.svg">
-                    <b> Market Cap: <a href="https://coinmarketcap.com/charts/">
-                    {{global.quotes.USD.total_market_cap | addComma}} 
-                </a> </b> 
-                </div> 
-                <div class = "box2">
-                    <img class = "icon2" src = "https://cdn2.iconfinder.com/data/icons/bitcoin-and-mining/44/trade-512.png">
-                    <b> Active Currencies:
-                        <a href="https://coinmarketcap.com/all/views/all/">
-                    {{global.active_cryptocurrencies}} 
-                </a>
-                    </b>
-                </div>
-                <div class = "box3">
-                    <img class = "icon2" src = "https://image.flaticon.com/icons/png/512/46/46775.png
-">
-                    <b> BTC Dominance: 
-                    <a href="https://coinmarketcap.com/charts/#dominance-percentage">
-                    {{global.bitcoin_percentage_of_market_cap}}% 
-                </a></b>
-                </div>
-            </div>        
-          
+        <div>
+          <center><img class="card-img-top icon" ng-src="images/generic.png" /></center>
         </div>
-        
+        <div class="card-body">
+          <div class="box1"><b> Total Market Cap </b></div>
+          <div class="box2"><b> Volume (24h) </b></div>
+          <div class="box3"><b> 24 Hour Percent Change </b></div>
+        </div>
+      </div>
+      <br />
+      <div class="card mb-7">
+        <div class="card-body test">
+          <div class="box1">
+            <img class="icon2" src="https://image.flaticon.com/icons/svg/189/189093.svg" />
+            <b> Market Cap: <a href="https://coinmarketcap.com/charts/"> {{global.quotes.USD.total_market_cap | addComma}} </a> </b>
+          </div>
+          <div class="box2">
+            <img class="icon2" src="https://cdn2.iconfinder.com/data/icons/bitcoin-and-mining/44/trade-512.png" />
+            <b> Active Currencies: <a href="https://coinmarketcap.com/all/views/all/"> {{global.active_cryptocurrencies}} </a> </b>
+          </div>
+          <div class="box3">
+            <img
+              class="icon2"
+              src="https://image.flaticon.com/icons/png/512/46/46775.png
+"
+            />
+            <b> BTC Dominance: <a href="https://coinmarketcap.com/charts/#dominance-percentage"> {{global.bitcoin_percentage_of_market_cap}}% </a></b>
+          </div>
+        </div>
+      </div>
     </div>
-    <br>
+    <br />
     <div class=" form-group has-feedback container">
-        <input type = "text" class = "form-control" ng-model = "search" placeholder="Search Coins "> 
-        <i class = "glyphicon glyphicon-search form-control-feedback"> </i>   
+      <input type="text" class="form-control" ng-model="search" placeholder="Search Coins " /> <i class="glyphicon glyphicon-search form-control-feedback"> </i>
     </div>
-    
+
     <div id="snackbar">Coin List Updated</div>
-    
 
-    
-    
-    <div  ng-repeat="(key, value) in cryptoData.data.data | filter: search" class="container">
-        <div class="card mb-7">
-            <div class = "card-body test"> 
-                <div class = "box1"> 
-                    <b> {{value.name }} </b> 
-                </div> 
-                <div class = "box2" ng-class = "value.quotes.USD.percent_change_24h > 0 ? 'positive' : 'negative'"> 
-                    <b> {{value.quotes.USD.price | currency}}  </b>
-                </div>
-                
-                <div class = "box3" ng-class = "value.quotes.USD.percent_change_1h > 0 ? 'positive' : 'negative'"> 
-                    <b> {{value.quotes.USD.percent_change_1h}}% </b>
-                </div>
-            </div>        
-            <div> 
-                <center> 
-                    <img class="card-img-top icon" ng-src="https://s2.coinmarketcap.com/static/img/coins/64x64/{{value.id}}.png">
-                </center>
-                
-                   
-            </div>
-            <div class="card-body">
-                <div class = "box1"> 
-                    <b> {{value.quotes.USD.market_cap | addComma}}  </b>
-                </div> 
-                <div class = "box2"> 
-                    <b>  {{value.quotes.USD.volume_24h | currency }} </b>
-                </div>
-                <div class = "box3" ng-class = "value.quotes.USD.percent_change_24h > 0 ? 'positive' : 'negative'">
-                    <b> {{value.quotes.USD.percent_change_24h}}% </b>
-                </div>
-            </div>
+    <div ng-repeat="(key, value) in cryptoData.data.data | filter: search" class="container">
+      <div class="card mb-7">
+        <div class="card-body test">
+          <div class="box1"><b> {{value.name }} </b></div>
+          <div class="box2" ng-class="value.quotes.USD.percent_change_24h > 0 ? 'positive' : 'negative'"><b> {{value.quotes.USD.price | currency}} </b></div>
+
+          <div class="box3" ng-class="value.quotes.USD.percent_change_1h > 0 ? 'positive' : 'negative'"><b> {{value.quotes.USD.percent_change_1h}}% </b></div>
         </div>
+        <div>
+          <center><img class="card-img-top icon" ng-src="https://s2.coinmarketcap.com/static/img/coins/64x64/{{value.id}}.png" /></center>
+        </div>
+        <div class="card-body">
+          <div class="box1"><b> {{value.quotes.USD.market_cap | addComma}} </b></div>
+          <div class="box2"><b> {{value.quotes.USD.volume_24h | currency }} </b></div>
+          <div class="box3" ng-class="value.quotes.USD.percent_change_24h > 0 ? 'positive' : 'negative'"><b> {{value.quotes.USD.percent_change_24h}}% </b></div>
+        </div>
+      </div>
     </div>
-    
-   
-   
-
-    </body>
+  </body>
 </html>
-
